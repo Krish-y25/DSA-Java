@@ -1,5 +1,9 @@
 package Arrays;
 
+
+//Time Complexity: O(n)
+//Space Complexity: O(1)
+
 public class Rmv_duplicates_from_sorted_array {
     static int remove_duplicates_sorted(int[] arr){
         int size = arr.length;
