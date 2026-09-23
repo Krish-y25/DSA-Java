@@ -1,7 +1,7 @@
 package Arrays;
 
 
-public class Min_consecutive_flips {
+public class min_consecutive_flips {
 
     //Optimal solution      TC: O(n)    SC: O(1)
     //If an array begins with 1 then it will either end with 1 or 0, so when it ends with 1
