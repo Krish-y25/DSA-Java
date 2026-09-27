@@ -48,8 +48,33 @@ public class equilibrium_point {
         }
         return false;
     }
+
+    //Practice problem: Array partitioned into three different parts with equal sum
+    // TC: O(n)     SC: O(1)
+    static boolean three_partition(int[] arr) {
+        int sum = 0;
+        for (int x : arr) {
+            sum += x;
+        }
+        if (sum % 3 != 0) return false;
+        int target = sum / 3;
+        int currentSum = 0;
+        int cuts = 0;
+
+        // Stop at arr.length - 1 to ensure the 3rd part is non-empty
+        for (int i = 0; i < arr.length - 1; i++) {
+            currentSum += arr[i];
+            if (currentSum == target * (cuts + 1)) {
+                cuts++;
+                if (cuts == 2) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
     public static void main(String[] args){
-        int[] arr = {4, 2, 2};
-        System.out.println(equi_pt_optimal(arr));
+        int[] arr = {2, 3, 1, 1, 1, 2, 5};
+        System.out.println(three_partition(arr));
     }
 }
