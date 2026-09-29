@@ -36,12 +36,11 @@ public class left_rotate_array_by_d_places {
             arr[i + arr.length - d] = temp[i];
         }
     }
-
     //Best approach - Time complexity: O(n), Space complexity: O(1)  [REVERSAL ALGORITHM]
     static void left_rotate_optimal(int[] arr, int d){
+        reverse(arr, 0, arr.length - 1);
         reverse(arr, 0, d-1);
         reverse(arr, d, arr.length - 1);
-        reverse(arr, 0, arr.length - 1);
     }
     static void reverse(int[] arr, int low, int high){
         while(low<high){
