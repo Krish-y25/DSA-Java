@@ -15,7 +15,7 @@ public class max_sum_subarray {
         return res;
     }
 
-    //Optimal Solution  TC: O(n) SC: O(n)
+    //Optimal Solution  TC: O(n) SC: O(1)
     static int max_sum(int[] arr){
         int res = arr[0], maxending = arr[0];
         for (int i = 1; i<arr.length; i++){
