@@ -1,6 +1,6 @@
 package Searching;
 
-//  TC: O(n)    SC: O(1)
+//  TC: O(logn)    SC: O(1)
 public class _01_binary_search_iterative {
     static int b_search(int[] nums, int val){
         int low = 0, high = nums.length -1;
