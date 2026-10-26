@@ -17,7 +17,7 @@ public class _03_first_occ_sorted_ary {
         return -1;
     }
 
-    // TC: O(logn)  SC: O(log)
+    // TC: O(logn)  SC: O(logn)
     static int first_occ_rec(int[] nums, int low, int high, int x){
         if(low>high) return -1;
         int mid = (low+high)/2;
